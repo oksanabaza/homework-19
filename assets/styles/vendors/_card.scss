@@ -1,0 +1,236 @@
+$shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+$checkbox-size: 18px;
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin: 10px 0;
+}
+
+@media (max-width: 1225px) {
+  .card-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 840px) {
+  .card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 570px) {
+  .card-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  // margin: 20px;
+  width: 100%;
+  height: 100%;
+  // max-width: 304px;
+  box-shadow: $shadow;
+
+  .card_header {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    position: relative;
+    height: 150px;
+    .card_discount {
+      position: absolute;
+      left: 15%;
+
+      button {
+        min-width: 50px;
+        background-color: red;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+      }
+    }
+    .card_picture img {
+      max-width: 100px;
+      width: 100%;
+    }
+  }
+
+  .card_checkboxes {
+    padding: 10px 0;
+    width: 100%;
+    height: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .card_stars {
+      .rating_block {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 90px;
+        height: 15px;
+      }
+      .rating_block input[type="radio"] {
+        display: none;
+      }
+      .label_rating {
+        float: right;
+        display: block;
+        width: 16px;
+        height: 15px;
+        background: no-repeat 50% 0 url("../src/star-empty.png");
+        cursor: pointer;
+        margin-right: 2px;
+      }
+
+      .rating_block .label_rating:hover,
+      .rating_block .label_rating:hover ~ .label_rating,
+      .rating_block input[type="radio"]:checked ~ .label_rating {
+        background-position: 50% -25px;
+        background: no-repeat 50% 0 url("../src/star-full.png");
+      }
+    }
+
+    .card_checkbox {
+      display: flex;
+    }
+  }
+
+  .card_text {
+    padding: 5px 10px;
+  }
+
+  .card_weight {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center;
+    justify-items: center;
+    margin: 10px 0;
+    // height: 15px;
+    // padding: 0 10px;
+    input[type="radio"] {
+      display: none;
+    }
+
+    .weight_label {
+      float: right;
+      display: block;
+      width: 44px;
+      height: 15px;
+      background: url("../src/print-icon-empty.png") no-repeat 50% 0;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+
+    .weight_label:hover,
+    .weight_label:hover ~ .weight_label,
+    input[type="radio"]:checked ~ .weight_label {
+      background-position: 50% -25px;
+      background: url("../src/print-icon-blue.png") no-repeat 50% 0;
+    }
+  }
+  .radio_info {
+    width: 100%;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    font-family: Helvetica;
+    font-size: 13px;
+    color: #2b2d36;
+    letter-spacing: 0;
+  }
+  .radio_title {
+    width: 100%;
+    display: flex;
+    vertical-align: top;
+  }
+
+  .weight_label {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: Helvetica;
+    font-size: 14px;
+    color: #343640;
+    letter-spacing: 0;
+  }
+}
+
+.order_menu {
+  padding: 0 10px 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  grid-gap: 10px;
+}
+
+.strikethrough {
+  position: relative;
+  font-size: 40px;
+  font-family: Helvetica;
+  font-size: 16px;
+  color: #dfdfdf;
+  letter-spacing: 0;
+  width: 43px;
+  height: 21px;
+}
+
+.strikethrough:before {
+  border-bottom: 1px solid #fd6d6d;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 50%;
+}
+
+.real_price {
+  font-family: Helvetica;
+  font-size: 18px;
+  color: #fd6d6d;
+  letter-spacing: 0;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  width: 134px;
+  font-family: Helvetica;
+  font-size: 16px;
+  color: #dfdfdf;
+  letter-spacing: 0;
+}
+
+button.cart_button {
+  width: 110px;
+  height: 35px;
+  font-family: Helvetica;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 0;
+  text-align: center;
+  background-color: #68d6f4;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+}
+
+button.cart_button:hover {
+  width: 110px;
+  height: 35px;
+  font-family: Helvetica;
+  font-size: 14px;
+  letter-spacing: 0;
+  text-align: center;
+  background: #572f8c;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
