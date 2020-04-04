@@ -1,12 +1,7 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-body {
-  width: 1600px;
-  display: flex;
-  justify-content: center;
 }
 .popular_container {
   width: 1294px;
@@ -39,12 +34,8 @@ body {
   align-items: center;
 }
 .card {
-  width: 304px;
+  max-width: 304px;
   height: 382px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -64,26 +55,23 @@ button.card_discount {
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  width: 264px;
+  width: 100%;
   height: 130px;
 }
 
 .card_checkboxes {
-  width: 264px;
+  width: 100%;
   height: 15px;
   display: flex;
   flex-direction: row;
   margin-top: 25px;
 }
-/*.card_stars{
-	
-}*/
 
 .rating_block {
   width: 90px;
   height: 15px;
 }
-.rating_block input[type="radio"] {
+.rating_block input[type='radio'] {
   display: none;
 }
 .label_rating {
@@ -98,7 +86,7 @@ button.card_discount {
 
 .rating_block .label_rating:hover,
 .rating_block .label_rating:hover ~ .label_rating,
-.rating_block input[type="radio"]:checked ~ .label_rating {
+.rating_block input[type='radio']:checked ~ .label_rating {
   background-position: 50% -25px;
   background: url(src/star-full.png) no-repeat 50% 0;
 }
@@ -122,7 +110,7 @@ button.card_discount {
 .card_text {
   display: flex;
   justify-content: center;
-  width: 264px;
+  width: 100%;
   height: 58px;
   margin-top: 21px;
   font-family: Helvetica;
@@ -135,7 +123,7 @@ button.card_discount {
   width: 90px;
   height: 15px;
 }
-.card_weight input[type="radio"] {
+.card_weight input[type='radio'] {
   display: none;
 }
 .weight_label {
@@ -150,7 +138,7 @@ button.card_discount {
 
 .card_weight .weight_label:hover,
 .card_weight .weight_label:hover ~ .weight_label,
-.card_weight input[type="radio"]:checked ~ .weight_label {
+.card_weight input[type='radio']:checked ~ .weight_label {
   background-position: 50% -25px;
   background: url(src/print-icon-blue.png) no-repeat 50% 0;
 }
@@ -162,7 +150,7 @@ button.card_discount {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 264px;
+  width: 100%;
   height: 18px;
 }
 
@@ -195,7 +183,7 @@ button.card_discount {
 }
 .order_menu {
   margin-top: 25px;
-  width: 264px;
+  width: 100%;
   height: 35px;
   display: flex;
   justify-content: space-between;
@@ -215,7 +203,7 @@ button.card_discount {
 .strikethrough:before {
   border-bottom: 1px solid #fd6d6d;
   position: absolute;
-  content: "";
+  content: '';
   width: 100%;
   height: 50%;
 }
@@ -266,4 +254,4 @@ button.cart_button:hover {
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
-}
+} */
